@@ -1,0 +1,115 @@
+/* Reset styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('4d5a2c123a16bf27e4f5e871daa06a50.jpg'); /* Add your background image here */
+    background-size: cover;
+    color: #f5f5f5;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    flex-direction: column;
+    text-align: center;
+}
+
+/* Glowing effect and styling for sigma image */
+.sigma-image-container {
+    position: relative;
+    display: inline-block;
+    animation: float 3s ease-in-out infinite;
+}
+
+.sigma-image {
+    width: 200px;
+    height: auto;
+    filter: drop-shadow(0 0 20px gold);
+}
+
+/* Floating animation */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(-10px);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+}
+
+/* Title styling */
+.title {
+    font-size: 2.5em;
+    color: #ffd700;
+    text-shadow: 0 0 15px #ffd700, 0 0 30px #ffd700;
+    margin-top: 20px;
+}
+
+/* Glowing blessing button */
+.blessing-button {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    color: #ffd700;
+    background-color: transparent;
+    border: 2px solid #ffd700;
+    border-radius: 25px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.blessing-button:hover {
+    background-color: #ffd700;
+    color: #121212;
+    box-shadow: 0 0 20px #ffd700;
+}
+
+/* Social icons styling */
+.socials {
+    margin-top: 20px;
+}
+
+.social-icon {
+    width: 30px; /* Adjust size as needed */
+    margin: 0 10px;
+}
+
+/* Particle effect */
+.particle-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.particle {
+    position: absolute;
+    background-color: #ffd700;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    opacity: 0.7;
+    animation: rise 5s linear infinite;
+}
+
+@keyframes rise {
+    0% {
+        transform: translateY(100vh) scale(0);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh) scale(1);
+        opacity: 0;
+    }
+}
